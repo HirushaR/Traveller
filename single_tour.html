@@ -26,7 +26,9 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/nav.css">
+    
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -37,72 +39,54 @@
 
     <!-- header-start -->
     <header>
-        <div class="header-area ">
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid">
-                    <div class="header_bottom_border">
-                        <div class="row align-items-center">
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <img src="img/logo.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="main-menu  d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a class="active" href="index.html">home</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a class="" href="travel_destination.html">Destination</a></l/li>
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                        <li><a href="destination_details.html">Destinations details</a></li>
-                                                        <li><a href="elements.html">elements</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
-                                <div class="social_wrap d-flex align-items-center justify-content-end">
-                                    <div class="number">
-                                        <p> <i class="fa fa-phone"></i> (+94) 76 169 3445</p>
-                                    </div>
-                                    <div class="social_links d-none d-xl-block">
-                                        <ul>
-                                            <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="seach_icon">
-                                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-
+        <div id="navigation">
+            <div class="items-wrapper">
+                <div class="item">
+                    <a href="#" class="item-link">Home</a>
                 </div>
+              <div class="item">
+                <a href="#" class="item-link">Tours</a>
+                <div class="arrow"></div>
+                <div class="submenu-wrapper">
+                  <div class="item-submenu">
+                    <div class="submenu-group">
+                      <a href="#" class="submenu-link-master">Travel Styles</a>
+                      <a href="#" class="submenu-link">Classic</a>
+                      <a href="#" class="submenu-link">Adventure</a>
+                      <a href="#" class="submenu-link">Fitventures</a>
+                      <a href="#" class="submenu-link">Sailventures</a>
+                    </div>                    
+                    <div class="submenu-group">
+                      <a href="#" class="submenu-link-master">Destinations</a>
+                      <a href="#" class="submenu-link">Sri Lanka</a>
+                      <a href="#" class="submenu-link">Maldives</a>
+                      <a href="#" class="submenu-link">Bhutan</a>
+                      <a href="#" class="submenu-link">Vietnam</a>
+                      <a href="#" class="submenu-link">Combodia</a>
+                      <a href="#" class="submenu-link">Thailand</a>                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <a href="#" class="item-link">Blog</a>                
+              </div>             
+              <div class="item">
+                <a href="#" class="item-link">Essentials</a>                
+              </div> 
+              <div class="item">
+                <a href="#" class="item-link">About Us</a>                
+              </div>             
+              <div class="seach_icon">
+                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                    <i class="fa fa-search"></i>
+                </a>
             </div>
-        </div>
+            </div>
+          </div>
     </header>
+
+
     <!-- header-end -->
     <div class="destination_banner_wrap overlay">
         <div class="destination_text text-center">
@@ -110,27 +94,131 @@
             <p>Pixel perfect design with awesome contents</p>
         </div>
     </div>
+    <div class="wrapper">
+        <ul>
+            <li class="facebook">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <div class="slider">
+                <p>facebook</p>
+            </div>
+            </li>
+            
+            <li class="twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <div class="slider">
+                <p>twitter</p>
+            </div>
+            </li>
+            
+            <li class="instagram">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <div class="slider">
+                <p>instagram</p>
+            </div>
+            </li>
+            
+            <li class="google">
+            <i class="fa fa-google" aria-hidden="true"></i>
+            <div class="slider">
+                <p>google</p>
+            </div>
+            </li>
+            
+            <li class="whatsapp">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <div class="slider">
+                <p>whatsapp</p>
+            </div>
+            </li>
+        </ul>
+    </div>
+     <div class="tab-container">
+        <div class="tab-wrap">
+    
+            <input type="radio" name="tabs" id="tab1" checked>
+            <div class="tab-label-content" id="tab1-content">
+            <label for="tab1">OVERVIEW</label>
+            <div class="tab-content"><h3>FULL MOON PARTY PACKS</h3>
+                The shortest trip in our family of earth-shatteringly memorable, life changingly brilliant, Thailand Group Travel experiences. The Full Moon Party Pack was born after our 10 Day Full Moon experience basically got so popular that we ran out of space, so… we decided to make the 5-day Full Moon Party its own package, this way we can open more spaces and make a real party of it. In Tru style. This package gives you an intro to Koh Phangan as well as allowing you to experience the world-famous Full Moon Party in the best way possible. With TruTravels. Don’t just come to this beautiful island for one night, get drunk, pass out and leave like 99% of the young people who visit. Enjoy boat trips, beaches, sunset bars, new friends, a giant obstacle course on water, beer, buckets, the biggest beach party in the world and of course, more fun than you can shake a glow stick at. Maximum adventure, minimum hassle.</div>
+            </div>
+            
+            <input type="radio" name="tabs" id="tab2">
+            <div class="tab-label-content" id="tab2-content">
+            <label for="tab2">INCLUSIONS </label>
+            <div class="tab-content">TAB 2 - Quisque egestas, purus in tempor vulputate, diam augue mollis quam, quis elementum ipsum ex a risus. Quisque sed augue porta, facilisis felis vitae, cursus mi. Nullam mollis magna eget tincidunt mollis. Sed suscipit placerat ultricies. Sed eget lorem et ipsum ultricies congue eu a enim. Nam quis ex nec lorem dignissim suscipit eu ut felis. Vivamus molestie felis id purus congue, vel ultrices sem molestie.</div>
+            </div>
+            
+            <input type="radio" name="tabs" id="tab3">
+            <div class="tab-label-content" id="tab3-content">
+            <label for="tab3"> ITINERARY</label>
+            <div class="tab-content">TAB 3 - Donec vulputate ante ac ligula vestibulum, id mollis diam commodo. Integer at consequat magna. Sed elit sem, dictum nec porttitor ac, ultrices id enim. Morbi semper eros a enim malesuada, eu finibus erat dictum. Ut vitae orci a odio sagittis malesuada. Cras volutpat vel lorem in tempor. Duis ultricies lectus sit amet tellus vehicula faucibus. Etiam sed leo ac erat tempor feugiat at quis ipsum. Mauris pellentesque nisl lorem, ac finibus sapien sagittis vel. Donec et lobortis est. Vestibulum dignissim ligula nec erat interdum, quis sollicitudin metus pretium. Vestibulum quis dui sapien. Proin commodo justo ac orci elementum molestie. Aliquam mattis orci vitae volutpat commodo.</div>
+            </div>
+        
+            <input type="radio" name="tabs" id="tab4">
+            <div class="tab-label-content" id="tab4-content">
+            <label for="tab4">Dates</label>
+            <div class="tab-content">TAB 4 - Quisque egestas, purus in tempor vulputate, diam augue mollis quam, quis elementum ipsum ex a risus. Quisque sed augue porta, facilisis felis vitae, cursus mi. Nullam mollis magna eget tincidunt mollis. Sed suscipit placerat ultricies. Sed eget lorem et ipsum ultricies congue eu a enim. Nam quis ex nec lorem dignissim suscipit eu ut felis. Vivamus molestie felis id purus congue, vel ultrices sem molestie.</div>
+            </div>
+            
+            <div class="slide"></div>
+        </div>
+    </div> 
+    <section class="intro">
+        <div class="time-container">
+            <h1>Vertical Timeline &darr;</h1>
+        </div>
+        </section>
+
+        <section class="timeline">
+        <ul>
+            <li style="height:auto;">
+                <div>
+                    <time>Day 01</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                </div>
+            </li>
+            <li style="height:auto;">
+                <div>
+                    <time>Day 02</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+                </div>
+            </li>
+            <li style="height:auto;">
+                <div>
+                    <time>Day 03</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+                </div>
+            </li >
+            <li style="height:auto;">
+                <div>
+                    <time>Day 04</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                </div>
+            </li>
+            <li style="height:auto;">
+                <div>
+                    <time>Day 05</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                </div>
+            </li>
+            <li style="height:auto;">
+                <div>
+                    <time>Day 06</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                </div>
+            </li>
+            <li style="height:auto;">
+                <div>
+                    <time>Day 07</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                </div>
+            </li>
+            
+        </ul>
+    </section>
+
 
     <div class="destination_details_info">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-9">
                     <div class="destination_info">
-                        <h3>Description</h3>
+                        <h3>Sri Lanka</h3>
                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
-                        <p>Variations of passages of lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
-                        <div class="single_destination">
-                            <h4>Day-01</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
-                        </div>
-                        <div class="single_destination">
-                            <h4>Day-02</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
-                        </div>
-                        <div class="single_destination">
-                            <h4>Day-03</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
-                        </div>
+                        <p>Variations of passages of lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>                        
                     </div>
                     <div class="bordered_1px"></div>
                     <div class="contact_join">
@@ -465,6 +553,7 @@
 
 
     <script src="js/main.js"></script>
+    <script src="js/timeline.js"></script>
     <script>
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',

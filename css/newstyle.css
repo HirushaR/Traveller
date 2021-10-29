@@ -834,13 +834,13 @@ h3 {
   background-image: url(../img/banner/banner3.png);
 }
 .slider_bg_4 {
-  background-image: url(../img/banner/sl1.jpg);
+  background-image: url(../img/srilanka/742121953-huge.jpg);
 }
 .slider_bg_5 {
-  background-image: url(../img/banner/sl2.png);
+  background-image: url(../img/srilanka/shutterstock_1496315567.jpg);
 }
 .slider_bg_6 {
-  background-image: url(../img/banner/sl3.jpg);
+  background-image: url(../img/srilanka/shutterstock_1629598726.jpg);
 }
 
 /* line 10, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_slider.scss */
@@ -6228,3 +6228,327 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/*tab*/
+
+.tab-wrap {
+  width: 60%;
+  margin-left: 20%;
+  position: relative;
+  display: flex;
+  top: -106px;
+}
+
+input[type=radio][name=tabs] {
+  position: absolute;
+  z-index: -1;
+}
+input[type=radio][name=tabs]:checked + .tab-label-content label {
+  color: white;
+}
+input[type=radio][name=tabs]:checked + .tab-label-content .tab-content {
+  display: block;
+}
+input[type=radio][name=tabs]:nth-of-type(1):checked ~ .slide {
+  left: calc((100% / 4) * 0);
+}
+input[type=radio][name=tabs]:nth-of-type(2):checked ~ .slide {
+  left: calc((100% / 4) * 1);
+}
+input[type=radio][name=tabs]:nth-of-type(3):checked ~ .slide {
+  left: calc((100% / 4) * 2);
+}
+input[type=radio][name=tabs]:nth-of-type(4):checked ~ .slide {
+  left: calc((100% / 4) * 3);
+}
+input[type=radio][name=tabs]:first-of-type:checked ~ .slide {
+  left: 0;
+}
+
+label {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #00bcd4;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 56px;
+  transition: color 0.2s ease;
+  width: 100%;
+}
+
+.slide {
+  background: #ffeb3b;
+  width: calc(100% / 4);
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: calc(100% - 4px);
+  transition: left 0.3s ease-out;
+}
+
+.tab-label-content {
+  width: 100%;
+}
+.tab-label-content .tab-content {
+  position: absolute;
+  top: 100px;
+  left: 16px;
+  line-height: 130%;
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    padding: 40px 0 90px 10%;
+  }
+
+  .tab-wrap {
+    width: 80%;
+    margin-left: 10%;
+    top: -106px;
+  }
+}
+
+.tab-container {
+  padding: 240px 0;
+  overflow: auto;
+}
+@media (max-width: 576px) {
+  /* line 150, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog_part.scss */
+  .tab-container {
+    padding: 240px 0;
+    margin-bottom: 240px;
+    overflow: auto;    
+  }
+}
+/* timelines */
+
+
+.intro {
+  background: #f45b69;
+  padding: 100px 0;
+}
+
+.timeline ul {
+  background: #456990;
+  padding: 50px 0;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  z-index: 1;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #f45b69;
+}
+
+.timeline ul li div::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #f45b69 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #f45b69;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #f45b69;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #f45b69 transparent transparent;
+  }
+}
+
+
+/* EXTRA/CLIP PATH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline-clippy ul li::after {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.timeline-rhombus ul li::after {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timeline-rhombus ul li div::before {
+  bottom: 12px;
+}
+
+.timeline-star ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.timeline-heptagon ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+
+.timeline-infinite ul li::after {
+  animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  color: black;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.page-footer a {
+  display: flex;
+  margin-left: 4px;
+}
+
+.time-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}

@@ -32,6 +32,8 @@ if(menu.length){
   //   prependTo: ".blog_menu"
   // });
 
+  
+
 // review-active
 $('.slider_active').owlCarousel({
   loop:true,
