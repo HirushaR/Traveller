@@ -17,6 +17,7 @@
         <link rel = "stylesheet" href = "css/style.css">
         <link rel = "stylesheet" href = "css/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href = "css/galary-image.css">
     </head>
     <body>
         <!-- navbar  -->
@@ -127,6 +128,81 @@
             </div>
         </div>
         <!-- end of img modal -->
+        <div class = "container"></div>
+            <div class = "title-wrap">
+                <h2 class = "sm-title">Heritage Sight seen, and Cultural  Festival</h2>
+                <h3 class = "lg-title">Authentic Sri Lankan Food</h3>
+                <p style="    padding: 0 25%;">Sri Lanka’s tropical climate, sandy beaches and incredible cuisine are just
+among the many reasons to include this beautiful South Asian country  on your
+ travel bucket list. This tiny island nation, otherwise known as the ‘Pearl of the Indian Ocean’,
+has fast become a popular tourist destination for holidaymakers</p>
+            </div>
+            <div class="options">            
+                <div class="option active" style="--optionBackground:url(../images/srilanka/new_shutterstock_408250816.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <div class="info">
+                        <div class="main">Blonkisoaz</div>
+                        <div class="sub">Despite being a relatively small island, Sri Lanka is endowed with a diverse collection of landscapes, climates and natural features. Sri Lanka’s infamous beaches have been enticing visitors for many years. However, the rest of the island harbours many more idyllic vistas.
+
+                            The central highlands are carpeted with emerald tea plantations interspersed with occasional waterfalls. Cool climates, misty views, and quaint estate bungalows are a throwback to bygone eras.</div>
+                    </div>
+                </div>
+                </div>
+                <div class="option" style="--optionBackground:url(../images/srilanka/new_shutterstock_232546966.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="info">
+                        <div class="main">WILD LIFE</div>
+                        <div class="sub">Despite its small size Sri Lanka boasts of one of the highest rates of biological endemism in the world whether in plants or animals and is included among the top five biodiversity hotspots in the world. Of the ninety-one species of mammals found in Sri Lanka Asian elephants, sloth bear, leopards, sambar and wild buffaloes engages the majority of the attention of wildlife enthusiast. Yet the rarest mammals of Sri Lanka are the red slender Loris, Toque Macaque, and Purple-faced Langur, who according to IUCN clarifications are endangered due to habitat loss.</div>
+                    </div>
+                </div>
+                </div>
+                <div class="option" style="--optionBackground:url(../images/srilanka/sigiriya-459197_1920.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="info">
+                        <div class="main">HERITAGE</div>
+                        <div class="sub">With a history expanding over 3000years, Sri Lanka holds some of world’s ancient cities including Anuradhapura, Polonnaruwa and Digamadulla; their once glorious townships, palaces, temples, monasteries, hospitals and theaters intricately carved and modeled out of stone lay and abandoned and forgotten with time amidst the soaring jungles.</div>
+                    </div>
+                </div>
+                </div>
+                <!-- <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="info">
+                        <div class="main">Idiefe</div>
+                        <div class="sub">Omuke trughte a otufta</div>
+                    </div>
+                </div>
+                </div>
+                <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="info">
+                        <div class="main">Inatethi</div>
+                        <div class="sub">Omuke trughte a otufta</div>
+                    </div>
+                </div>
+                </div> -->
+            </div>
+        </div>
+         
         <!-- blog section -->
         <section id = "blog" class = "py-4">
             <div class = "container">
@@ -267,7 +343,15 @@
 
         <!-- js -->
         <script src = "js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script>
+            $(".option").click(function(){
+            $(".option").removeClass("active");
+            $(this).addClass("active");
+            
+            });
+
             // image modal
             const allGalleryItem = document.querySelectorAll('.gallery-item');
             const imgModalDiv = document.getElementById('img-modal-box');
