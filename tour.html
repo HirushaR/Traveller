@@ -17,346 +17,9 @@
         <link rel = "stylesheet" href = "css/style.css">
         <link rel = "stylesheet" href = "css/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href = "css/tour.css">
 
-        <style>
-            .justyfy{
-                display: flex;
-                justify-content: space-between;
-            }
-            .details-points{
-                width: 60%;
-                padding-left: 20%;
-            }
-            .icon-color{
-                color: #ff9838;
-            }
-            .icon-color-red{
-                color: red;
-            }
-            /* Slider */
-            #slider{
-            width:100%;
-            height:500px;
-            position:relative;
-            overflow:hidden;
-            }
-            @keyframes load{
-            from{left:-100%;}
-            to{left:0;}
-            }
-            .slides{
-            width:400%;
-            height:100%;
-            position:relative;
-            -webkit-animation:slide 30s infinite;
-            -moz-animation:slide 30s infinite;
-            animation:slide 30s infinite;
-            }
-            .slider-coresel{
-            width:25%;
-            height:100%;
-            float:left;
-            position:relative;
-            z-index:1;
-            overflow:hidden;
-            }
-            .slide img{
-            width:100%;
-            height:100%;
-            }
-            .slide img{
-            width:100%;
-            height:100%;
-            }
-            .image{
-            width:100%;
-            height:100%;
-            }
-            .image img{
-            width:100%;
-            height:auto;
-            }
 
-            /* Legend */
-            .legend{
-            border:500px solid transparent;
-            border-left:800px solid rgba(52, 73, 94, .7);
-            border-bottom:0;
-            position:absolute;
-            bottom:0;
-            }
-
-            /* Contents */
-            .content{
-            width:100%;
-            height:100%;
-            position:absolute;
-            overflow:hidden;
-            }
-            .content-txt{
-            width:400px;
-            height:150px;
-            float:left;
-            position:relative;
-            top:300px;
-            -webkit-animation:content-s 7.5s infinite;
-            -moz-animation:content-s 7.5s infinite;
-            animation:content-s 7.5s infinite;
-            }
-            .content-txt h1{
-            font-family:Arial;
-            text-transform:uppercase;
-            font-size:24px;
-            color:#fff;
-            text-align:left;
-            margin-left:30px;
-            padding-bottom:10px;
-            }
-            .content-txt h2{
-            font-family:arial;
-            font-weight:normal;
-            font-size:14px;
-            font-style:italic;
-            color:#fff;
-            text-align:left;
-            margin-left:30px;
-            }
-
-            /* Switch */
-            .switch{
-            width:120px;
-            height:10px;
-            position:absolute;
-            bottom:50px;
-            z-index:99;
-            left:30px;
-            }
-            .switch > ul{
-            list-style:none;
-            }
-            .switch > ul > li{
-            width:10px;
-            height:10px;
-            border-radius:50%;
-            background:#333;
-            float:left;
-            margin-right:5px;
-            cursor:pointer;
-            }
-            .switch ul{
-            overflow:hidden;
-            }
-            .on{
-            width:100%;
-            height:100%;
-            border-radius:50%;
-            background:#f39c12;
-            position:relative;
-            -webkit-animation:on 30s infinite;
-            -moz-animation:on 30s infinite;
-            animation:on 30s infinite;
-            }
-
-            /* Animation */
-            @-webkit-keyframes slide{
-            0%,100%{
-                margin-left:0%;
-            }
-            21%{
-                margin-left:0%;
-            }
-            25%{
-                margin-left:-100%;
-            }
-            46%{
-                margin-left:-100%;
-            }
-            50%{
-                margin-left:-200%;
-            }
-            71%{
-                margin-left:-200%;
-            }
-            75%{
-                margin-left:-300%;
-            }
-            96%{
-                margin-left:-300%;
-            }
-            }
-            @-moz-keyframes slide{
-            0%,100%{
-                margin-left:0%;
-            }
-            21%{
-                margin-left:0%;
-            }
-            25%{
-                margin-left:-100%;
-            }
-            46%{
-                margin-left:-100%;
-            }
-            50%{
-                margin-left:-200%;
-            }
-            71%{
-                margin-left:-200%;
-            }
-            75%{
-                margin-left:-300%;
-            }
-            96%{
-                margin-left:-300%;
-            }
-            }
-            @keyframes slide{
-            0%,100%{
-                margin-left:0%;
-            }
-            21%{
-                margin-left:0%;
-            }
-            25%{
-                margin-left:-100%;
-            }
-            46%{
-                margin-left:-100%;
-            }
-            50%{
-                margin-left:-200%;
-            }
-            71%{
-                margin-left:-200%;
-            }
-            75%{
-                margin-left:-300%;
-            }
-            96%{
-                margin-left:-300%;
-            }
-            }
-
-            @-webkit-keyframes content-s{
-            0%{left:-420px;}
-            10%{left:0px;}
-            30%{left:0px;}
-            40%{left:0px;}
-            50%{left:0px;}
-            60%{left:0px;}
-            70%{left:0;}
-            80%{left:-420px;}
-            90%{left:-420px;}
-            100%{left:-420px;}
-            }
-            @-moz-keyframes content-s{
-            0%{left:-420px;}
-            10%{left:0px;}
-            30%{left:0px;}
-            40%{left:0px;}
-            50%{left:0px;}
-            60%{left:0px;}
-            70%{left:0;}
-            80%{left:-420px;}
-            90%{left:-420px;}
-            100%{left:-420px;}
-            }
-            @keyframes content-s{
-            0%{left:-420px;}
-            10%{left:20px;}
-            15%{left:0px;}
-            30%{left:0px;}
-            40%{left:0px;}
-            50%{left:0px;}
-            60%{left:0px;}
-            70%{left:0;}
-            80%{left:-420px;}
-            90%{left:-420px;}
-            100%{left:-420px;}
-            }
-
-            @-webkit-keyframes on{
-            0%,100%{
-                margin-left:0%;
-            }
-            21%{
-                margin-left:0%;
-            }
-            25%{
-                margin-left:15px;
-            }
-            46%{
-                margin-left:15px;
-            }
-            50%{
-                margin-left:30px;
-            }
-            71%{
-                margin-left:30px;
-            }
-            75%{
-                margin-left:45px;
-            }
-            96%{
-                margin-left:45px;
-            }
-            }
-
-            @-moz-keyframes on{
-            0%,100%{
-                margin-left:0%;
-            }
-            21%{
-                margin-left:0%;
-            }
-            25%{
-                margin-left:15px;
-            }
-            46%{
-                margin-left:15px;
-            }
-            50%{
-                margin-left:30px;
-            }
-            71%{
-                margin-left:30px;
-            }
-            75%{
-                margin-left:45px;
-            }
-            96%{
-                margin-left:45px;
-            }
-            }
-
-            @keyframes on{
-            0%,100%{
-                margin-left:0%;
-            }
-            21%{
-                margin-left:0%;
-            }
-            25%{
-                margin-left:15px;
-            }
-            46%{
-                margin-left:15px;
-            }
-            50%{
-                margin-left:30px;
-            }
-            71%{
-                margin-left:30px;
-            }
-            75%{
-                margin-left:45px;
-            }
-            96%{
-                margin-left:45px;
-            }
-            }
-
-        </style>
     </head>
     <body>
         <!-- navbar  -->
@@ -391,9 +54,30 @@
             </div>
         </nav>
         <!-- end of navbar  -->
-
-        <!-- header -->
+        <div class="m1 menu">
+            <div id="menu-center">
+                <ul>
+                    <li><a class="active" href="#home">Home</a>
         
+                    </li>
+
+                    <li><a href="#details">Details</a>
+        
+                    </li>
+                    <li><a href="#include">Include</a>
+        
+                    </li>
+                    <li><a href="#timeLine">TimeLine</a>
+        
+                    </li>
+                    <li><a  href="#bookNow">BookNow</a>
+        
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- header -->        
         <div id="slider">
             <div class="slides">
               <div class="slider-coresel">
@@ -403,7 +87,11 @@
                     <h1>Galle</h1>
                     <h2>Stone sea walls, expanded by the Dutch, encircle car-free streets with architecture reflecting Portuguese, Dutch and British rule..</h2>
                   </div>
+                  <div class="slide-btn">
+                    <a href="#bookNow" class="btn">Book Now</a>
                 </div>
+                </div>
+            
                 <div class="image">
                   <img src="images/srilanka/galle.jpg">
                 </div>
@@ -415,7 +103,11 @@
                     <h1>Hikkaduwa</h1>
                     <h2>It’s known for its strong surf and beaches, including palm-dotted Hikkaduwa Beach, lined with restaurants and bars</h2>
                   </div>
+                  <div class="slide-btn">
+                    <a href="#bookNow" class="btn">Book Now</a>
                 </div>
+                </div>
+                
                 <div class="image">
                   <img src="images/srilanka/hikkaduwa.jpg">
                 </div>
@@ -427,7 +119,10 @@
                     <h1>Sigiriya</h1>
                     <h2>Sigiriya or Sinhagiri is an ancient rock fortress located in the northern Matale District near the town of Dambulla in the Central Province, Sri Lanka.</h2>
                   </div>
+                  <div class="slide-btn">
+                    <a href="#bookNow" class="btn">Book Now</a>
                 </div>
+                </div>                
                 <div class="image">
                   <img src="images/srilanka/sigiriya.jpg">
                 </div>
@@ -439,7 +134,11 @@
                     <h1>Sigiriya</h1>
                     <h2>Sigiriya or Sinhagiri is an ancient rock fortress located in the northern Matale District near the town of Dambulla in the Central Province, Sri Lanka</h2>
                   </div>
+                  <div class="slide-btn">
+                    <a href="#bookNow" class="btn">Book Now</a>
                 </div>
+                </div>
+                
                 <div class="image">
                   <img src="images/srilanka/sigiriya.jpg">
                 </div>
@@ -456,9 +155,9 @@
               </ul>
             </div>
           </div>
-        <!-- header -->
+        <!-- header -->        
         <!-- about section -->
-        <section id = "about" class = "py-4">
+        <section id = "home" class = "py-4">
             <div class = "container">
                 <div class = "title-wrap">
                     <span class = "sm-title">Overview</span>                            
@@ -528,7 +227,7 @@
         </div>  
 
         <!-- DEtails section -->
-        <section id = "about" class = "py-4">
+        <section id = "details" class = "py-4">
             <div class = "container">
                 <div class = "title-wrap">
                     <span class = "sm-title">Details</span>                            
@@ -550,7 +249,7 @@
         </section>
         <!-- end of Details section -->
         <!-- Include section -->
-        <section id = "about" class = "py-4">
+        <section id = "include" class = "py-4">
             <div class = "container">
                 <div class = "title-wrap">
                     <span class = "sm-title">Price Includes</span>                            
@@ -587,8 +286,33 @@
             </div>
         </section>
         <!-- end of include section -->
+        <!-- Exlude section -->
+        <section id = "exlude" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">Price Excludes</span>                            
+                </div>
+                <div class="" style="display: flex;justify-content: end;" >
+                    <div style="width: 40%;">
+                        <span class = "sm-title">Air Ticket and Visa</span>  
+                        <p><i class="fa fa-times icon-color-red" aria-hidden="true" ></i> International Air ticket to Vietnam</p>  
+                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> Sri Lankan Visa</p>
+                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> Travel Insurance</p>                    
+                    </div>
+                    <div style="width: 40%;">
+                        <span class = "sm-title">Personal and Others</span>  
+                        <p><i class="fa fa-times icon-color-red" aria-hidden="true" ></i> Lunch & dinner throughout the tour.</p>  
+                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> Personal expenses such as laundry, telephone, drinks, etc</p>
+                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> All other services not specified in the itinerary.</p>
+                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> Cost of beverage throughout the tour.</p>
+                    </div>                    
+                </div>            
+
+            </div>
+        </section>
+            <!-- end of Exlude section -->
         <!-- timeline section -->
-        <section >
+        <section id="timeLine">
             <h1 style="	color:#333;font-weight:700;margin-top:125px;text-align:center;
             text-transform:uppercase;letter-spacing:4px;line-height:23px;">Dates</h1>
             <br> 
@@ -731,32 +455,8 @@
                 </div>
             </div>
         </section>
-        <!-- end of time line section -->
-        <!-- Exlude section -->
-        <section id = "about" class = "py-4">
-            <div class = "container">
-                <div class = "title-wrap">
-                    <span class = "sm-title">Price Excludes</span>                            
-                </div>
-                <div class="" style="display: flex;justify-content: end;" >
-                    <div style="width: 40%;">
-                        <span class = "sm-title">Air Ticket and Visa</span>  
-                        <p><i class="fa fa-times icon-color-red" aria-hidden="true" ></i> International Air ticket to Vietnam</p>  
-                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> Sri Lankan Visa</p>
-                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> Travel Insurance</p>                    
-                    </div>
-                    <div style="width: 40%;">
-                        <span class = "sm-title">Personal and Others</span>  
-                        <p><i class="fa fa-times icon-color-red" aria-hidden="true" ></i> Lunch & dinner throughout the tour.</p>  
-                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> Personal expenses such as laundry, telephone, drinks, etc</p>
-                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> All other services not specified in the itinerary.</p>
-                        <p><i class="fa fa-times icon-color-red" aria-hidden="true"></i> Cost of beverage throughout the tour.</p>
-                    </div>                    
-                </div>            
+        <!-- end of time line section --> 
 
-            </div>
-        </section>
-        <!-- end of Exlude section -->
         
         <!-- services section -->
         <section id = "services" class = "py-4">
@@ -796,8 +496,72 @@
                 </div>
             </div>
         </section>
-                <!-- end of services section -->
-    
+        <!-- end of services section -->
+        
+
+        <!-- booknow section -->
+        <section id = "bookNow" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">Book Now</span>                            
+                </div>
+                <div class="" >
+                    <div class="sign-in-up-form">
+                        <ul class="tab-group" style="    display: flex;justify-content: end;padding-left: 12%;">
+                            <li class="tab active" style="width: 46%;"><a href="#login">Booking  Form</a></li>
+                            <li class="tab" style=" width: 46%;"><a href="#signup">Enquiry From</a></li>
+                        </ul>
+                    
+                        <div class="tab-content">
+                            <div id="login">
+                                <h1>Need A tour?<br />Book now!</h1>
+                    
+                                <form action="/" method="post">
+                                    <div class="field-wrap">
+                                        <label id="label_userEmail"><i class="fa fa-calendar" aria-hidden="true"></i></i></label>
+                                        <input type="date" name="userEmail" id="userEmail" autocomplete="off" />
+                                    </div>
+                    
+                                    <div class="field-wrap">
+                                        <label id="label_userPass"><i class="fa fa-bed" aria-hidden="true"></i></label>
+                                        <input type="number" name="userPass" id="userPass" autocomplete="off" />
+                                    </div>
+                                        
+                                    <button class="btn" style="    margin-left: 75%;" />Process</button>
+                                </form>
+                            </div>
+                    
+                            <div id="signup">
+                                <h1>Do you have a Enquiry<br />Let us Know!</h1>
+                    
+                                <form method="post">
+                                    <div class="field-wrap">
+                                        <label id="label_signupNickname">Your Name</label>
+                                        <input type="text" name="signupNickname" id="signupNickname" autocomplete="off" />
+                                    </div>
+                    
+                                    <div class="field-wrap">
+                                        <label id="label_signupEmail">Email Address</label>
+                                        <input type="email" name="signupEmail" id="signupEmail" autocomplete="off" />
+                                    </div>
+
+                                    <div class="field-wrap">
+                                        
+                                        <textarea  rows="4" cols="50" placeholder="">Your Enquiry                               
+                                        </textarea>
+                                    </div>
+                    
+
+                                    <button type="submit" class="btn" style="    margin-left: 75%;" />Submit Enquiry</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+
+            </div>
+        </section>
+        <!-- end of booknow section -->
         
 
         <!-- footer -->
@@ -862,6 +626,7 @@
             </div>
         </footer>
         <!-- end of footer -->
+        
 
         <!-- js -->
         <script src = "js/script.js"></script>
@@ -869,43 +634,61 @@
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
          <script>
+        jQuery(document).ready(function($) {
+            $('.tab a').on('click', function(e) {
+                e.preventDefault();
+
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active');
+                target = $(this).attr('href');
+
+                $('.tab-content > div').not(target).hide();
+                $(target).fadeIn(600);
+            });
              $(document).scroll(function() {
                 var y = $(this).scrollTop();
                 if (y > 390) {
                     $('.wrapper').fadeIn();
+                    $('#tab_navigation').fadeIn();
+                    
                 } else {
                     $('.wrapper').fadeOut();
+                    $('#tab_navigation').fadeOut();
                 }
             });
+            var viewportWidth = $(window).width();
+            console.log("view port "+viewportWidth)
+            
             
             $(".step").click( function() {
             $(this).addClass("active").prevAll().addClass("active");
             $(this).nextAll().removeClass("active");
-        });
-        
-        $(".step01").click( function() {
-            $("#line-progress").css("width", "3%");
-            $(".discovery").addClass("active").siblings().removeClass("active");
-        });
-        
-        $(".step02").click( function() {
-            $("#line-progress").css("width", "25%");
-            $(".strategy").addClass("active").siblings().removeClass("active");
-        });
-        
-        $(".step03").click( function() {
-            $("#line-progress").css("width", "50%");
-            $(".creative").addClass("active").siblings().removeClass("active");
-        });
-        
-        $(".step04").click( function() {
-            $("#line-progress").css("width", "75%");
-            $(".production").addClass("active").siblings().removeClass("active");
-        });
-        
-        $(".step05").click( function() {
-            $("#line-progress").css("width", "100%");
-            $(".analysis").addClass("active").siblings().removeClass("active");
+            });
+            
+            $(".step01").click( function() {
+                $("#line-progress").css("width", "3%");
+                $(".discovery").addClass("active").siblings().removeClass("active");
+            });
+            
+            $(".step02").click( function() {
+                $("#line-progress").css("width", "25%");
+                $(".strategy").addClass("active").siblings().removeClass("active");
+            });
+            
+            $(".step03").click( function() {
+                $("#line-progress").css("width", "50%");
+                $(".creative").addClass("active").siblings().removeClass("active");
+            });
+            
+            $(".step04").click( function() {
+                $("#line-progress").css("width", "75%");
+                $(".production").addClass("active").siblings().removeClass("active");
+            });
+            
+            $(".step05").click( function() {
+                $("#line-progress").css("width", "100%");
+                $(".analysis").addClass("active").siblings().removeClass("active");
+            });
         });
         
          
